@@ -23,7 +23,7 @@ app.post('/register', (req, res) => {
 
 // Express.js server
 app.get('/song/lang', (req, res) => {
-  SongModel.find({ language: "English" })
+  SongModel.find()
     .then(songs => res.json(songs))
     .catch(err => res.status(500).json({ error: err.message }));
 });
